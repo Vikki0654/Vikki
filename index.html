@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body Status Monitor</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ecg.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <!-- Sign Up / Login Section -->
+  <div class="wrapper">
+    <form id="authForm">
+      <h1>Sign Up / Login</h1>
+      <div class="input-box">
+        <input type="text" id="username" placeholder="Name" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="text" id="email" placeholder="Email" required>
+        <i class='bx bx-envelope'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <button type="submit" class="submit" id="btn">Submit</button>
+    </form>
+  </div>
+
+  <!-- ECG Voltage Section -->
+  <div class="wrapper">
+    <form id="authForm">
+      <h1>ECG Voltage</h1>
+      <div class="input-box">
+        <input type="text" id="username" placeholder="Voltage" required>
+      </div>
+    </form>
+  </div>
+
+  <!-- Dashboard Navigation Section -->
+  <div class="name">Home</div>
+  <div class="colors">
+    <div class="one">
+      <div class="logo"><span>BodyStatusMonitor</span></div>
+    </div>
+    <div class="two">
+      <ul class="navlist">
+        <li class="proo1">
+          <a href="#home">Home</a>
+        </li>
+        <li class="ddmenu">
+          <a href="#about">
+            <div class="dropdown">
+              <div class="select">
+                <span class="selected">Status</span>
+                <div class="caret"></div> 
+              </div>
+              <ul class="menu">
+                <li class="active">ElectroCardioGram</li>
+                <li>heartRate</li>
+                <li>BloodOxygenLevel</li>
+                <li>BodyStressLevel</li>										
+                <li>BodyTemperature</li>
+              </ul>
+            </div>
+          </a>
+        </li>
+        <li class="proo2"><a href="#services">Records</a></li>
+        <li class="proo3"><a href="#skills">Profile</a></li>
+        <li class="proo4"><a href="#portfolio">Help</a></li>
+        <li class="proo5"><a href="#contact">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Real-time data and status display -->
+  <div id="output"></div>
+  <div id="status"></div>
+
+  <script type="module" src="script.js"></script>
+  <script type="module" src="/ecg.js"></script>
+  <script src="/dashboard.js"></script>
+</body>
+</html>
